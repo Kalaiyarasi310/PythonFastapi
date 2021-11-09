@@ -47,9 +47,7 @@ def do_something_with_the_event(data):
 async def webhook(
     webhook_input: EchoPostReq,
     request: Request,
-    response: Response,
-    content_length: int = Header(...),
-    x_hook_signature: str = Header(None)
+    response: Response
 ):
     print ("webhook_input",webhook_input)
     #do_something_with_the_event(webhook_input)
